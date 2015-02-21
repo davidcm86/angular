@@ -1,0 +1,17 @@
+
+<div id="contenedor" ng-app ng-init="cajas = [];">
+     <h1>Empezamos con Angular.js</h1>
+
+    <input type="text" ng-model="nombreCaja">
+    <input type="button" value="Insertar Nombre Caja" ng-click="cajas.push(nombreCaja); nombreCaja = '';">
+    <h2>Cajas</h2>
+    <p ng-repeat="caja in cajas" ng-init="indice = $index">Mis cajas: {{ caja }} en el puesto {{ indice }}</p>
+    </br>
+    <p>Has seleccionado la caja: {{ selectorCajas }}</p>
+    </br>
+    <select ng-model="selectorCajas">
+    	<option value="caja1">Caja 1</option>
+    	<option value="caja2">Caja 2</option>
+    </select>	
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
