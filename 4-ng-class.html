@@ -1,0 +1,21 @@
+<link rel="stylesheet" type="text/css" href="css/4-ng-class.css" media="screen" />
+<div ng-app="contenedor" ng-controller="contenedorController as ct">
+	<h1 ng-class="ct.h1">Bienvenidos a mi contenedor</h1>
+	<select ng-model="ct.h1">
+		<option value="peque">Peque</option>
+		<option value="grande">Grande</option>
+	</select>
+
+	<h2 ng-class="ct.clases">Resultado</h2>
+	<input type="text" ng-model="ct.cantidad" placeholder="0" size="3">
+	</br>
+	<input type="button" ng-click="ct.sumar()" value="Sumar">
+	<input type="button" ng-click="ct.restar()" value="Restar">
+	<h2>Totales</h2>
+	<!-- Si el resultado total es igual o mayor que 0, pone la clase positivo, si es mayor que cero pone la clase negativa -->
+	<p ng-class="{positivo: ct.total >= 0, negativo: ct.total < 0}">
+		El total es: {{ ct.total }}
+	</p>	
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="js/4-ng-class.js"></script>	

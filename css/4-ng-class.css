@@ -1,0 +1,21 @@
+.negativo {
+	color: red;
+}
+.positivo {
+	color: #33f;
+}
+.peque{
+	font-size: 10pt;
+}
+.grande{
+	font-size: 18pt;
+}
+.uno{
+	background-color: #666;
+}
+.dos{
+	color: #fff;
+}
+.tres{
+	font-size: 20px;
+}
