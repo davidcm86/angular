@@ -1,0 +1,10 @@
+<div ng-app="contenedor" ng-controller="contenedorController as ct">
+	<input type="checkbox" ng-model="ct.activo" ng-change="ct.aviso()">El checkbox tiene valor activo: {{ ct.activo }}</input>
+	</br>
+	<input type="checkbox" ng-model="ct.clarooscuro" ng-true-value="claro" ng-false-value="oscuro">El checkbox tiene valor clarooscuro: {{ ct.clarooscuro }}</input> 
+	</br>
+	<input type="button" ng-click="ct.activo=true" value="Checkbox 1º a true">
+</div>	
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="js/5-checkbox-ng-change.js"></script>	
+
