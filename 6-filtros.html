@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="css/6-filtros.css" media="screen" />
+</head>
+<body>	
+	<div ng-app="apiApp" ng-controller="apiAppCtrl as vm">
+		<h1>Probando Ajax con JSONP</h1>
+		<!-- Todos los datos con los que se juega están en el cliente -->
+		<p>
+			Busca cerveza:
+			<!-- Al rellenar nombre, gracias al binding ya está modelo-->
+			<input type="text" ng-model="vm.nombre"> <input type="button" value="Buscar" ng-click="vm.buscaCervezas(vm.nombre)">
+		</p>
+		<aside>
+			<h2>Filtra:</h2>
+			<input type="text" ng-model="vm.filtroCliente">
+			<h2>Orden</h2>
+			<!-- Ordenamos el campo que sea (name, description) por el orden  true o false-->
+			<p>
+				<button ng-click="vm.orden=false">Alfabetico</button>
+				<br />
+				<button ng-click="vm.orden=true">Contrario</button>
+			</p>
+			<p>
+				<input type="radio" name="campo" ng-model="vm.campo" value="name"> Nombre
+				<br />
+				<input type="radio" name="campo" ng-model="vm.campo" value="description">
+				Descripción
+			</p>
+		</aside>
+		<section>
+			<ul>
+				<li ng-repeat="cerveza in vm.cervezas | filter:vm.filtroCliente |
+					orderBy:vm.campo:vm.orden" ng-class="{even: $even, odd: $odd}">
+					<span>{{ $index +1 }}.- {{ cerveza.name }},</span> {{ cerveza.description }}
+				</li>
+			</ul>
+		</section>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="js/6-filtros.js"></script>		
+</body>
+</html>
