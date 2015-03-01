@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Probando Ajax en AngularJS</title>
+	<style>
+		body{ font-family: sans-serif;}
+		li{
+			font-size: 0.8em;
+		}
+		li span{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div ng-app="apiApp" ng-controller="apiAppCtrl as vm">
+	<h1>Pruebo Ajax</h1>
+	<p>
+	Selecciona:
+		<select ng-model="vm.url" ng-change="vm.buscaEnRegion()">
+			<option value="http://restcountries.eu/rest/v1/region/africa">Africa</option>
+			<option value="http://restcountries.eu/rest/v1/region/europe">Europa</option>
+			<option value="http://restcountries.eu/rest/v1/region/americas">America</option>
+		</select>
+	</p>
+	<ul>
+		<li ng-repeat="pais in vm.paises">País: <span>{{pais.name}}</span>, capital:
+			{{pais.capital}}
+		</li>
+	</ul>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+	<script src="js/7-ajax.js"></script>		
+</body>
+</html>
