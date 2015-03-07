@@ -1,0 +1,13 @@
+<div ng-app="postApp" ng-controller="postController as pc">
+	<form ng-submit="pc.enviarDatos()" >
+		<label>Nombre</label>
+		<input type="text" ng-model="pc.datos.nombre"></br>
+		<label>Apellidos</label>
+		<input type="text" ng-model="pc.datos.apellidos"></br>
+		<label>Telefono</label>
+		<input type="text" ng-model="pc.datos.telefono"></br>
+		<input type="submit" value="Enviar">
+	</form>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="js/9-post-angular.js"></script>		
