@@ -1,0 +1,15 @@
+<body ng-app="routesApp">
+	<nav>
+		<ul>
+			<!-- Recalcar que no estamos llamando a otra ruta, sino que estamos mostrando esas vistas en la misma ruta /10-routes.html-->
+			<li><a href="#/10-routes">Este es el Inicio</a></li>
+			<li><a href="#/10-bienvenida">Bienvenida</a></li>
+			<li><a href="#/10-despedida">Despedida</a></li>
+		</ul>
+	</nav>
+	<hr />
+	<div ng-view></div> <!-- Aquí se mostrarán las nuevas vistas-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-route.js"></script>
+	<script src="js/10-routes.js"></script>
+</body>
