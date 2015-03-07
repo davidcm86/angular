@@ -2,7 +2,7 @@
 	<h1>Pruebo Ajax con JSONP</h1>
 	<p>
 	Busca cerveza:
-	<input type="text" ng-model="vm.nombre"> <input type="button" value="Buscar" ng-click="vm.buscaCervezas()">
+	<input type="text" ng-model="vm.nombre"> <input type="button" value="Buscar" ng-click="vm.buscaCervezas(vm.nombre)">
 	</p>
 	<ul>
 		<li ng-repeat="cerveza in vm.cervezas"><span>{{cerveza.name}},</span>{{ cerveza.description }}</li>

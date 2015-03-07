@@ -9,6 +9,7 @@ angular
 			if(vm.nombre){
 				url += "&query=" + vm.nombre;
 			}
+			console.log(url);
 			$http.jsonp(url).success(function(respuesta){
 				console.log("res:", respuesta);
 				vm.cervezas = respuesta.beers;
