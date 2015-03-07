@@ -1,0 +1,12 @@
+<div ng-app="apiApp" ng-controller="apiAppCtrl as vm">
+	<h1>Pruebo Ajax con JSONP</h1>
+	<p>
+	Busca cerveza:
+	<input type="text" ng-model="vm.nombre"> <input type="button" value="Buscar" ng-click="vm.buscaCervezas()">
+	</p>
+	<ul>
+		<li ng-repeat="cerveza in vm.cervezas"><span>{{cerveza.name}},</span>{{ cerveza.description }}</li>
+	</ul>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+<script src="js/8-api-rest.js"></script>	
