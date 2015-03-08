@@ -2,7 +2,7 @@ angular
 	.module('routesApp', ['ngRoute']) // directiva para cargar rutas
 	.config(function($routeProvider){ // routeProvider contiene los metodos
 		$routeProvider
-			.when("/", {
+			.when("/10-routes.html", {
 				controller: "rutaController",
 				controllerAs: "rc",
 				templateUrl: "10-routes.html"

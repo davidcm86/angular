@@ -2,7 +2,7 @@ angular
 	.module('navApp', ['ngRoute']) // directiva para cargar rutas
 	.config(function($routeProvider){ // routeProvider contiene los metodos
 		$routeProvider
-			.when("/", {
+			.when("/11-location-nav.html", {
 				controller: "navController",
 				controllerAs: "nc",
 				templateUrl: "11-location-nav.html"
@@ -23,7 +23,11 @@ angular
 
 function navController ($location) {
 	var nc = this;
+	nc.ruta = "";
 	nc.localizacion = function (ruta) {
-		return $location.path() == ruta; //$location.path te pasa la ruta en la que estas
+		console.log(ruta);
+		if (ruta != "") {
+			return $location.path() == ruta; //$location.path te pasa la ruta en la que estas
+		}
 	}
 }
