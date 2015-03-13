@@ -1,0 +1,20 @@
+<div ng-app="app" ng-controller="gatosController as ac">
+	<label>Nombre Gato</label>
+	<input type="text" ng-model="ac.nombreGato">
+	<input type="button" ng-click="ac.funciones.guardarNombreGato(ac.nombreGato)" value="Guardar Nombre Gato">
+	<h2>Nombres de Gatos</h2>
+	<ul>
+		<li ng-repeat="nuestroGato in ac.nuestrosGatos">{{ nuestroGato }}</li>
+	</ul>
+	<p>{{ ac.mensaje }}</p>
+<div ng-controller="gatosAmigosController as gac">
+	<h3>Vamos a recuperar los gatos de la factoria desde otro controller que no es gatosController sino, amigosGatosController</h3>
+	<h2>Aqui estan los miau miau</h2>
+	<ul>
+		<li ng-repeat="elGato in gac.nuestrosGatos">{{ elGato }}</li>
+	</ul>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-route.js"></script>
+<script src="js/12-factory.js"></script>
